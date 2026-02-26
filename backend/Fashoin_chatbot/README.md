@@ -1,4 +1,4 @@
-# ZaibunBot - Pakistan Fashion AI Chatbot 🇵🇰👗
+# GlamourGpt - Pakistan Fashion AI Chatbot 🇵🇰👗
 
 ## Quick Setup (3 Steps)
 
