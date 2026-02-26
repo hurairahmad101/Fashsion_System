@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlamourGPT - Pakistan Fashion AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Noto+Nastaliq+Urdu:wght@400;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --emerald: #0d6b3a;
+            --emerald-light: #1a8f4f;
+            --emerald-dark: #084d29;
+            --gold: #c9a84c;
+            --gold-light: #e8c97a;
+            --cream: #fdf6ec;
+            --ivory: #f5efe0;
+            --text-dark: #1a1209;
+            --text-mid: #4a3728;
+            --white: #ffffff;
+            --shadow: 0 8px 32px rgba(13, 107, 58, 0.15);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background: var(--cream);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(13,107,58,0.06) 0%, transparent 50%),
+                radial-gradient(circle at 90% 80%, rgba(201,168,76,0.08) 0%, transparent 50%);
+        }
+
+        /* HEADER */
+        header {
+            background: linear-gradient(135deg, var(--emerald-dark) 0%, var(--emerald) 60%, var(--emerald-light) 100%);
+            padding: 0;
+            box-shadow: 0 4px 20px rgba(8, 77, 41, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M30 30m-20 0a20 20 0 1 0 40 0a20 20 0 1 0-40 0'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+            opacity: 0.5;
+        }
+
+        .header-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px 24px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            position: relative;
+        }
+
+        .logo {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            box-shadow: 0 4px 12px rgba(201,168,76,0.4);
+            flex-shrink: 0;
+        }
+
+        .header-text h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: var(--white);
+            letter-spacing: 0.5px;
+            line-height: 1.2;
+        }
+
+        .header-text p {
+            color: rgba(255,255,255,0.75);
+            font-size: 0.82rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-top: 2px;
+        }
+
+        .status-pill {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 100px;
+            padding: 6px 14px;
+            font-size: 0.78rem;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #4ade80;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.3); }
+        }
+
+        /* QUICK TOPICS */
+        .quick-topics {
+            max-width: 900px;
+            margin: 20px auto 0;
+            padding: 0 24px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .topic-chip {
+            background: var(--white);
+            border: 1.5px solid rgba(13,107,58,0.2);
+            color: var(--emerald-dark);
+            padding: 7px 16px;
+            border-radius: 100px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            letter-spacing: 0.3px;
+        }
+
+        .topic-chip:hover {
+            background: var(--emerald);
+            color: var(--white);
+            border-color: var(--emerald);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(13,107,58,0.25);
+        }
+
+        /* CHAT AREA */
+        .chat-container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 0 24px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        #chat-messages {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            min-height: 300px;
+        }
+
+        /* MESSAGES */
+        .message {
+            display: flex;
+            gap: 12px;
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .message.user {
+            flex-direction: row-reverse;
+        }
+
+        .avatar {
+            width: 38px;
+            height: 38px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .bot-avatar {
+            background: linear-gradient(135deg, var(--emerald), var(--emerald-light));
+            box-shadow: 0 4px 12px rgba(13,107,58,0.3);
+        }
+
+        .user-avatar {
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            box-shadow: 0 4px 12px rgba(201,168,76,0.3);
+        }
+
+        .bubble {
+            max-width: 70%;
+            padding: 14px 18px;
+            border-radius: 20px;
+            line-height: 1.6;
+            font-size: 0.93rem;
+            position: relative;
+        }
+
+        .bot .bubble {
+            background: var(--white);
+            color: var(--text-dark);
+            border-radius: 4px 20px 20px 20px;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(13,107,58,0.08);
+        }
+
+        .user .bubble {
+            background: linear-gradient(135deg, var(--emerald), var(--emerald-light));
+            color: var(--white);
+            border-radius: 20px 4px 20px 20px;
+        }
+
+        .bubble .meta {
+            font-size: 0.72rem;
+            opacity: 0.6;
+            margin-top: 6px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .user .bubble .meta {
+            justify-content: flex-end;
+        }
+
+        /* Voice indicator */
+        .voice-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background: rgba(13,107,58,0.1);
+            color: var(--emerald);
+            border-radius: 100px;
+            padding: 2px 8px;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+
+        .user .voice-badge {
+            background: rgba(255,255,255,0.2);
+            color: var(--white);
+        }
+
+        /* TTS button */
+        .tts-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--emerald);
+            font-size: 16px;
+            padding: 2px;
+            opacity: 0.6;
+            transition: opacity 0.2s;
+        }
+
+        .tts-btn:hover { opacity: 1; }
+
+        /* WELCOME MSG */
+        .welcome-card {
+            background: linear-gradient(135deg, var(--emerald-dark), var(--emerald));
+            border-radius: 20px;
+            padding: 28px;
+            color: var(--white);
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .welcome-card h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+        }
+
+        .welcome-card p {
+            font-size: 0.88rem;
+            opacity: 0.85;
+            line-height: 1.6;
+        }
+
+        .welcome-emoji { font-size: 2.5rem; margin-bottom: 12px; }
+
+        /* TYPING INDICATOR */
+        .typing-indicator {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding: 14px 18px;
+            background: var(--white);
+            border-radius: 4px 20px 20px 20px;
+            box-shadow: var(--shadow);
+            width: fit-content;
+        }
+
+        .typing-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--emerald);
+            animation: typing 1.4s infinite;
+        }
+
+        .typing-dot:nth-child(2) { animation-delay: 0.2s; }
+        .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+        @keyframes typing {
+            0%, 80%, 100% { transform: scale(0.6); opacity: 0.4; }
+            40% { transform: scale(1); opacity: 1; }
+        }
+
+        /* INPUT AREA */
+        .input-area {
+            max-width: 900px;
+            margin: 12px auto 24px;
+            padding: 0 24px;
+            width: 100%;
+        }
+
+        .input-wrapper {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 8px 8px 8px 20px;
+            display: flex;
+            align-items: flex-end;
+            gap: 8px;
+            box-shadow: 0 4px 24px rgba(13,107,58,0.12);
+            border: 2px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        .input-wrapper:focus-within {
+            border-color: var(--emerald);
+        }
+
+        #user-input {
+            flex: 1;
+            border: none;
+            outline: none;
+            font-family: 'Lato', sans-serif;
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            resize: none;
+            background: transparent;
+            padding: 8px 0;
+            min-height: 42px;
+            max-height: 120px;
+            line-height: 1.5;
+        }
+
+        #user-input::placeholder { color: #b0a090; }
+
+        .btn {
+            width: 44px;
+            height: 44px;
+            border-radius: 14px;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            transition: all 0.2s ease;
+            flex-shrink: 0;
+        }
+
+        #send-btn {
+            background: linear-gradient(135deg, var(--emerald), var(--emerald-light));
+            color: white;
+            box-shadow: 0 4px 12px rgba(13,107,58,0.3);
+        }
+
+        #send-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 16px rgba(13,107,58,0.4);
+        }
+
+        #voice-btn {
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            color: white;
+            box-shadow: 0 4px 12px rgba(201,168,76,0.3);
+        }
+
+        #voice-btn:hover { transform: scale(1.05); }
+        #voice-btn.listening {
+            background: linear-gradient(135deg, #e53e3e, #fc8181);
+            animation: voicePulse 1s infinite;
+        }
+
+        @keyframes voicePulse {
+            0%, 100% { box-shadow: 0 4px 12px rgba(229,62,62,0.3); }
+            50% { box-shadow: 0 4px 24px rgba(229,62,62,0.6); }
+        }
+
+        .hint-text {
+            text-align: center;
+            font-size: 0.76rem;
+            color: #b0a090;
+            margin-top: 8px;
+            letter-spacing: 0.3px;
+        }
+
+        /* SCROLLBAR */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: rgba(13,107,58,0.2); border-radius: 3px; }
+
+        /* RESPONSIVE */
+        @media (max-width: 600px) {
+            .header-inner { padding: 16px; }
+            .header-text h1 { font-size: 1.3rem; }
+            .status-pill { display: none; }
+            .bubble { max-width: 85%; }
+            .quick-topics, .chat-container, .input-area { padding: 0 16px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-inner">
+        <div class="logo">🇵🇰</div>
+        <div class="header-text">
+            <h1>Fashion Chatbot</h1>
+            <p>Pakistan Fashion & Culture AI</p>
+        </div>
+        <div class="status-pill">
+            <div class="status-dot"></div>
+            <span>Qwen2.5 Local</span>
+        </div>
+    </div>
+</header>
+
+<!-- Quick Topic Chips -->
+<div class="quick-topics">
+    <div class="topic-chip" onclick="askTopic('What to wear for Eid ul Fitr?')">🌙 Eid Fashion</div>
+    <div class="topic-chip" onclick="askTopic('Tell me about Basant festival fashion')">🪁 Basant</div>
+    <div class="topic-chip" onclick="askTopic('Pakistani wedding dress guide')">💍 Wedding</div>
+    <div class="topic-chip" onclick="askTopic('14 August Independence Day outfit ideas')">🟢 14 August</div>
+    <div class="topic-chip" onclick="askTopic('Top Pakistani fashion designers')">✨ Designers</div>
+    <div class="topic-chip" onclick="askTopic('Current fashion trends in Pakistan')">📈 Trends</div>
+    <div class="topic-chip" onclick="askTopic('Sindhi traditional dress and embroidery')">🎨 Sindhi Style</div>
+</div>
+
+<div class="chat-container">
+    <div id="chat-messages">
+        <!-- Welcome Card -->
+        <div class="welcome-card">
+            <div class="welcome-emoji"></div>
+            <h2>Assalam-o-Alaikum! Welcome Fashion Chatbot</h2>
+            <p>Your AI guide to Pakistani fashion, festivals, and cultural style.<br>
+            <strong>Voice Mode:</strong> Click the gold microphone to speak your question!</p>
+        </div>
+    </div>
+</div>
+
+<!-- Input Area -->
+<div class="input-area">
+    <div class="input-wrapper">
+        <textarea 
+            id="user-input" 
+            placeholder="Ask about Pakistani fashion, festivals, designers... (اردو میں بھی پوچھ سکتے ہیں)"
+            rows="1"
+        ></textarea>
+        <button class="btn" id="voice-btn" onclick="toggleVoice()" title="Voice Input">🎤</button>
+        <button class="btn" id="send-btn" onclick="sendMessage()" title="Send">➤</button>
+    </div>
+    <div class="hint-text"> Voice → speaks response back &nbsp;|&nbsp; ⌨️ Text → shows text response</div>
+</div>
+
+<script>
+    const API_URL = 'http://localhost:8000';
+    const sessionId = 'session_' + Date.now();
+    let isListening = false;
+    let recognition = null;
+    let lastInputType = 'text';
+
+    // Auto-resize textarea
+    document.getElementById('user-input').addEventListener('input', function() {
+        this.style.height = 'auto';
+        this.style.height = Math.min(this.scrollHeight, 120) + 'px';
+    });
+
+    // Enter to send (Shift+Enter for new line)
+    document.getElementById('user-input').addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' && !e.shiftKey) {
+            e.preventDefault();
+            sendMessage();
+        }
+    });
+
+    // ========================
+    // SEND MESSAGE
+    // ========================
+    async function sendMessage(text = null, inputType = 'text') {
+        const input = document.getElementById('user-input');
+        const message = text || input.value.trim();
+        
+        if (!message) return;
+        
+        lastInputType = inputType;
+        input.value = '';
+        input.style.height = 'auto';
+
+        addMessage(message, 'user', inputType);
+        showTyping();
+
+        try {
+            const response = await fetch(`${API_URL}/chat`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    message: message,
+                    session_id: sessionId,
+                    input_type: inputType
+                })
+            });
+
+            const data = await response.json();
+            hideTyping();
+            addMessage(data.response, 'bot', inputType);
+
+            // If voice input → speak the response
+            if (inputType === 'voice') {
+                speakText(data.response);
+            }
+
+        } catch (error) {
+            hideTyping();
+            addMessage('⚠️ Cannot connect to server. Make sure the backend is running:\n```\ncd backend && uvicorn main:app --reload\n```', 'bot', inputType);
+        }
+    }
+
+    // ========================
+    // ADD MESSAGE TO UI
+    // ========================
+    function addMessage(text, role, inputType = 'text') {
+        const container = document.getElementById('chat-messages');
+        const msgDiv = document.createElement('div');
+        msgDiv.className = `message ${role === 'user' ? 'user' : 'bot'}`;
+        
+        const now = new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+        const voiceBadge = inputType === 'voice' ? '<span class="voice-badge">🎤 Voice</span>' : '';
+        
+        const formattedText = text
+            .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+            .replace(/\n• /g, '<br>• ')
+            .replace(/\n/g, '<br>');
+
+        if (role === 'user') {
+            msgDiv.innerHTML = `
+                <div class="avatar user-avatar">👤</div>
+                <div class="bubble">
+                    ${formattedText}
+                    <div class="meta">${voiceBadge} ${now}</div>
+                </div>
+            `;
+        } else {
+            msgDiv.innerHTML = `
+                <div class="avatar bot-avatar">🤖</div>
+                <div class="bubble">
+                    ${formattedText}
+                    <div class="meta">
+                        ${voiceBadge}
+                        ${now}
+                        <button class="tts-btn" onclick="speakText(\`${text.replace(/`/g, "'")}\`)" title="Listen">🔊</button>
+                    </div>
+                </div>
+            `;
+        }
+
+        container.appendChild(msgDiv);
+        msgDiv.scrollIntoView({ behavior: 'smooth', block: 'end' });
+    }
+
+    // ========================
+    // TYPING INDICATOR
+    // ========================
+    function showTyping() {
+        const container = document.getElementById('chat-messages');
+        const div = document.createElement('div');
+        div.className = 'message bot';
+        div.id = 'typing-msg';
+        div.innerHTML = `
+            <div class="avatar bot-avatar">🤖</div>
+            <div class="typing-indicator">
+                <div class="typing-dot"></div>
+                <div class="typing-dot"></div>
+                <div class="typing-dot"></div>
+            </div>
+        `;
+        container.appendChild(div);
+        div.scrollIntoView({ behavior: 'smooth', block: 'end' });
+    }
+
+    function hideTyping() {
+        const t = document.getElementById('typing-msg');
+        if (t) t.remove();
+    }
+
+    // ========================
+    // VOICE INPUT (Speech Recognition)
+    // ========================
+    function toggleVoice() {
+        if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
+            alert('Your browser does not support voice input. Please use Chrome or Edge.');
+            return;
+        }
+
+        const btn = document.getElementById('voice-btn');
+
+        if (isListening) {
+            recognition.stop();
+            return;
+        }
+
+        const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+        recognition = new SpeechRecognition();
+        recognition.lang = 'en-US'; // Can also set 'ur-PK' for Urdu
+        recognition.continuous = false;
+        recognition.interimResults = false;
+
+        recognition.onstart = () => {
+            isListening = true;
+            btn.classList.add('listening');
+            btn.innerHTML = '⏹';
+            btn.title = 'Stop Recording';
+        };
+
+        recognition.onresult = (event) => {
+            const transcript = event.results[0][0].transcript;
+            document.getElementById('user-input').value = transcript;
+            sendMessage(transcript, 'voice'); // Send as voice type
+        };
+
+        recognition.onerror = (event) => {
+            console.error('Speech recognition error:', event.error);
+            stopListening();
+        };
+
+        recognition.onend = () => stopListening();
+
+        recognition.start();
+    }
+
+    function stopListening() {
+        isListening = false;
+        const btn = document.getElementById('voice-btn');
+        btn.classList.remove('listening');
+        btn.innerHTML = '🎤';
+        btn.title = 'Voice Input';
+    }
+
+    // ========================
+    // VOICE OUTPUT (Text-to-Speech)
+    // ========================
+    function speakText(text) {
+        if (!('speechSynthesis' in window)) return;
+
+        window.speechSynthesis.cancel(); // Stop any ongoing speech
+
+        // Clean text for TTS (remove markdown-like chars)
+        const cleanText = text
+            .replace(/\*\*(.*?)\*\*/g, '$1')
+            .replace(/•/g, ',')
+            .replace(/🎉|👗|👔|💎|💡|🎊|✨|🎤|🔊|🇵🇰/g, '');
+
+        const utterance = new SpeechSynthesisUtterance(cleanText);
+        utterance.lang = 'en-US';
+        utterance.rate = 0.9;
+        utterance.pitch = 1.0;
+        utterance.volume = 1.0;
+
+        // Try to find a female voice
+        const voices = window.speechSynthesis.getVoices();
+        const femaleVoice = voices.find(v => 
+            v.name.includes('Female') || 
+            v.name.includes('Zira') || 
+            v.name.includes('Susan') ||
+            v.name.includes('Samantha')
+        );
+        if (femaleVoice) utterance.voice = femaleVoice;
+
+        window.speechSynthesis.speak(utterance);
+    }
+
+    // Load voices when available
+    window.speechSynthesis.onvoiceschanged = () => window.speechSynthesis.getVoices();
+
+    // ========================
+    // QUICK TOPIC CHIPS
+    // ========================
+    function askTopic(question) {
+        document.getElementById('user-input').value = question;
+        sendMessage(question, 'text');
+    }
+</script>
+
+</body>
+</html>
