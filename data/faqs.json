@@ -1,0 +1,781 @@
+[
+    {
+        "id": "FAQ_001",
+        "category": "General Usage",
+        "question": "What is GlamorBot?",
+        "answer_content": "GlamorBot is an AI-powered fashion assistant that provides personalized outfit recommendations, virtual try-ons, and accessory matching tailored to your body type and skin tone.",
+        "tags": [
+            "about",
+            "intro",
+            "glamorbot"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_002",
+        "category": "General Usage",
+        "question": "How does the GlamorBot chatbot work?",
+        "answer_content": "The chatbot uses a Retrieval-Augmented Generation (RAG) system to search our curated fashion database and provide expert styling advice in a conversational format.",
+        "tags": [
+            "technology",
+            "how-it-works"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_003",
+        "category": "General Usage",
+        "question": "How does the recommendation system suggest outfits?",
+        "answer_content": "It analyzes your height, body shape, and skin tone to filter the best silhouettes and colors from our 2026 fashion database.",
+        "tags": [
+            "recommendations",
+            "logic"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_004",
+        "category": "General Usage",
+        "question": "What is virtual try-on and how does it work?",
+        "answer_content": "Virtual try-on uses AI image generation to overlay digital clothing onto your uploaded photo, allowing you to see the fit and style before buying.",
+        "tags": [
+            "virtual-try-on",
+            "vto"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_005",
+        "category": "General Usage",
+        "question": "Do I need to upload my photo to use virtual try-on?",
+        "answer_content": "Yes, to get the most accurate result, a clear full-body or upper-body photo is required for the AI to process the garment overlay.",
+        "tags": [
+            "vto",
+            "privacy",
+            "photo"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_006",
+        "category": "General Usage",
+        "question": "Is my data safe on GlamorBot?",
+        "answer_content": "Yes, we use encrypted storage for your photos and personal measurements. Your data is never shared with third parties without consent.",
+        "tags": [
+            "security",
+            "data-safety"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_007",
+        "category": "General Usage",
+        "question": "Can I use GlamorBot without creating an account?",
+        "answer_content": "You can browse general trends, but personalized recommendations and virtual try-on history require a free account.",
+        "tags": [
+            "account",
+            "usage"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_008",
+        "category": "General Usage",
+        "question": "How accurate are the outfit recommendations?",
+        "answer_content": "Our recommendations are based on expert color theory and proportion logic, providing highly accurate styling for 2026 fashion standards.",
+        "tags": [
+            "accuracy",
+            "styling"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_009",
+        "category": "General Usage",
+        "question": "Can I save my favorite outfits?",
+        "answer_content": "Yes, you can click the 'Heart' icon on any recommendation to save it to your personal 'Style Wardrobe' in your profile.",
+        "tags": [
+            "features",
+            "save-outfit"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_010",
+        "category": "General Usage",
+        "question": "Can I share my try-on results with friends?",
+        "answer_content": "Absolutely! You can download your virtual try-on images or share them directly via WhatsApp or Instagram through the app.",
+        "tags": [
+            "sharing",
+            "social"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_011",
+        "category": "Outfit Recommendations",
+        "question": "How does GlamorBot choose outfits for me?",
+        "answer_content": "It uses a cross-reference logic between your physical profile (height, skin tone) and the event type (wedding, office, etc.) to pick the perfect dress.",
+        "tags": [
+            "logic",
+            "personalization"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_012",
+        "category": "Outfit Recommendations",
+        "question": "Can I get outfit suggestions for specific events?",
+        "answer_content": "Yes, simply tell the bot the occasion—like a Mehndi, a job interview, or a beach trip—and it will filter specific results.",
+        "tags": [
+            "events",
+            "categories"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_013",
+        "category": "Outfit Recommendations",
+        "question": "Can the chatbot suggest outfits based on weather?",
+        "answer_content": "Yes, the bot considers fabric weight (lawn for summer, velvet for winter) to ensure your outfit is appropriate for the current season.",
+        "tags": [
+            "weather",
+            "fabric"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_014",
+        "category": "Outfit Recommendations",
+        "question": "Can I filter recommendations by budget?",
+        "answer_content": "Yes, you can specify your budget range (e.g., Under 5000 PKR) to see affordable or luxury designer options.",
+        "tags": [
+            "budget",
+            "filter"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_015",
+        "category": "Outfit Recommendations",
+        "question": "Can I choose between eastern and western wear?",
+        "answer_content": "Yes, GlamorBot supports a wide range of Shalwar Kameez, Kurtas, Sarees, as well as Jeans, Dresses, and Blazers.",
+        "tags": [
+            "eastern",
+            "western",
+            "style-choice"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_016",
+        "category": "Outfit Recommendations",
+        "question": "Does GlamorBot recommend trending styles?",
+        "answer_content": "Our database is updated with 2026 fashion trends, ensuring you stay ahead with the latest cuts, colors, and patterns.",
+        "tags": [
+            "trends",
+            "2026"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_017",
+        "category": "Outfit Recommendations",
+        "question": "Can it suggest outfits based on my body shape?",
+        "answer_content": "Yes, whether you have an apple, pear, hourglass, or rectangle body shape, the bot suggests cuts that balance your proportions.",
+        "tags": [
+            "body-shape",
+            "flattering"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_018",
+        "category": "Outfit Recommendations",
+        "question": "Can I get casual and formal outfit recommendations?",
+        "answer_content": "Yes, the bot distinguishes between everyday street-wear and high-end formal wear for galas and weddings.",
+        "tags": [
+            "casual",
+            "formal"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_019",
+        "category": "Outfit Recommendations",
+        "question": "Does it recommend outfits for men and women?",
+        "answer_content": "Currently, GlamorBot specializes in women's fashion including ethnic, western, and fusion wear.",
+        "tags": [
+            "gender",
+            "scope"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_020",
+        "category": "Outfit Recommendations",
+        "question": "Can I customize recommendations by color preference?",
+        "answer_content": "Yes, you can tell the bot 'Show me blue outfits' or 'Avoid yellow' to refine your results.",
+        "tags": [
+            "color",
+            "customization"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_021",
+        "category": "Accessories Matching",
+        "question": "Can GlamorBot suggest matching jewelry?",
+        "answer_content": "Yes, the bot recommends jewelry based on your dress neckline, fabric color, and skin undertone (gold/silver).",
+        "tags": [
+            "jewelry",
+            "matching"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_022",
+        "category": "Accessories Matching",
+        "question": "Does it recommend matching shoes and bags?",
+        "answer_content": "Yes, every outfit recommendation comes with a 'Complete the Look' section featuring footwear and handbag suggestions.",
+        "tags": [
+            "shoes",
+            "bags",
+            "accessories"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_023",
+        "category": "Accessories Matching",
+        "question": "Can I match accessories with a specific dress?",
+        "answer_content": "Yes, you can describe a dress you already own, and the bot will suggest the best accessories to pair with it.",
+        "tags": [
+            "pairing",
+            "style-advice"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_024",
+        "category": "Accessories Matching",
+        "question": "Does it suggest minimal or heavy jewelry styles?",
+        "answer_content": "Depending on the event, it suggests everything from simple pearl studs for the office to heavy Kundan sets for weddings.",
+        "tags": [
+            "jewelry-style",
+            "minimal",
+            "heavy"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_025",
+        "category": "Accessories Matching",
+        "question": "Can I get cultural accessory suggestions (desi, western)?",
+        "answer_content": "Yes, we suggest traditional items like Khussas and Jhumkas as well as modern items like Stilettos and Totes.",
+        "tags": [
+            "culture",
+            "ethnic",
+            "western"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_026",
+        "category": "Accessories Matching",
+        "question": "Can I select gold or silver jewelry preferences?",
+        "answer_content": "Yes, you can set your preferred metal in settings, or the bot will suggest one based on your skin undertone test.",
+        "tags": [
+            "gold",
+            "silver",
+            "preferences"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_027",
+        "category": "Accessories Matching",
+        "question": "Can I mix and match accessories manually?",
+        "answer_content": "While the bot gives suggestions, you can use the 'Mix & Match' tool in the app to try different bags and shoes with your dress.",
+        "tags": [
+            "features",
+            "manual-match"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_028",
+        "category": "Accessories Matching",
+        "question": "Can GlamorBot suggest hairstyles with outfits?",
+        "answer_content": "Yes, it provides hair styling tips (buns, braids, open waves) that complement specific necklines and dress styles.",
+        "tags": [
+            "hair",
+            "hairstyles"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_029",
+        "category": "Accessories Matching",
+        "question": "Can it recommend makeup looks?",
+        "answer_content": "Yes, it suggests makeup palettes—from 'No-Makeup' looks to full bridal glam—based on your outfit color.",
+        "tags": [
+            "makeup",
+            "beauty"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_030",
+        "category": "Accessories Matching",
+        "question": "Does it suggest seasonal accessories?",
+        "answer_content": "Yes, it suggests items like pashmina shawls for winter weddings or straw bags for summer outings.",
+        "tags": [
+            "seasonal",
+            "winter",
+            "summer"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_031",
+        "category": "Event-Based Styling",
+        "question": "Can I get outfit suggestions for weddings?",
+        "answer_content": "Yes, we cover all wedding functions including Nikkah, Mehndi, Barat, and Walima with specific styling for each.",
+        "tags": [
+            "wedding",
+            "desi-wedding"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_032",
+        "category": "Event-Based Styling",
+        "question": "Does it recommend dresses for Eid?",
+        "answer_content": "Yes, we have a curated collection of Eid looks ranging from luxury lawn to festive pret.",
+        "tags": [
+            "eid",
+            "festive"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_033",
+        "category": "Event-Based Styling",
+        "question": "Can I get office wear suggestions?",
+        "answer_content": "Yes, it suggests professional and polished looks like tailored kurtas, blazers, and straight pants.",
+        "tags": [
+            "office",
+            "workwear"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_034",
+        "category": "Event-Based Styling",
+        "question": "What about party and dinner outfits?",
+        "answer_content": "From semi-formal dinner parties to high-glam night events, we suggest outfits that fit the vibe and venue.",
+        "tags": [
+            "party",
+            "dinner"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_035",
+        "category": "Event-Based Styling",
+        "question": "Can I get outfits for university or college?",
+        "answer_content": "Yes, we provide trendy, comfortable, and budget-friendly suggestions for students.",
+        "tags": [
+            "university",
+            "campus-life"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_036",
+        "category": "Event-Based Styling",
+        "question": "Does it suggest outfits for interviews?",
+        "answer_content": "Yes, it suggests confidence-boosting, modest, and professional attire perfect for making a great first impression.",
+        "tags": [
+            "interview",
+            "professional"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_037",
+        "category": "Event-Based Styling",
+        "question": "Can it recommend outfits for vacations?",
+        "answer_content": "Yes, whether it's a mountain trip or a beach holiday, we suggest appropriate layering and fabrics.",
+        "tags": [
+            "vacation",
+            "travel"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_038",
+        "category": "Event-Based Styling",
+        "question": "Can I get gym or sports outfit suggestions?",
+        "answer_content": "Yes, we suggest breathable, high-performance activewear for your workout sessions.",
+        "tags": [
+            "gym",
+            "activewear"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_039",
+        "category": "Event-Based Styling",
+        "question": "Can it suggest outfits for festivals?",
+        "answer_content": "Yes, we cover major cultural and seasonal festivals with vibrant and traditional styling.",
+        "tags": [
+            "festivals",
+            "holidays"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_040",
+        "category": "Event-Based Styling",
+        "question": "Can it recommend outfits for formal dinners?",
+        "answer_content": "Yes, it suggests sophisticated evening gowns, sarees, and formal suits for upscale dining events.",
+        "tags": [
+            "formal-dinner",
+            "evening-wear"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_041",
+        "category": "Personalization",
+        "question": "Can I enter my body measurements?",
+        "answer_content": "Yes, in your profile settings, you can input height, weight, and shoulder/waist measurements for tailored advice.",
+        "tags": [
+            "measurements",
+            "personalization"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_042",
+        "category": "Personalization",
+        "question": "Does GlamorBot consider my skin tone?",
+        "answer_content": "Yes, our 'Color Palette' feature suggests colors that specifically enhance your fair, wheatish, or deep skin tone.",
+        "tags": [
+            "skin-tone",
+            "color-theory"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_043",
+        "category": "Personalization",
+        "question": "Can I set my height and weight?",
+        "answer_content": "Yes, these metrics help the bot determine if a silhouette will make you look taller or more balanced.",
+        "tags": [
+            "height",
+            "weight"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_044",
+        "category": "Personalization",
+        "question": "Can I save my preferences for future use?",
+        "answer_content": "Yes, once you set your profile, the bot remembers your skin tone and body shape for all future conversations.",
+        "tags": [
+            "settings",
+            "user-data"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_045",
+        "category": "Personalization",
+        "question": "Does it learn from my choices over time?",
+        "answer_content": "Yes, the more you 'Like' certain styles, the more GlamorBot prioritizes similar looks in your feed.",
+        "tags": [
+            "ai-learning",
+            "preferences"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_046",
+        "category": "Personalization",
+        "question": "Can I update my fashion preferences?",
+        "answer_content": "Yes, you can change your style preference (e.g., from Minimalist to Bold) at any time in the app settings.",
+        "tags": [
+            "update-profile",
+            "style-change"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_047",
+        "category": "Personalization",
+        "question": "Does it support modest fashion styling?",
+        "answer_content": "Yes, we have a 'Modest Mode' that focuses on hijabs, loose silhouettes, and high necklines.",
+        "tags": [
+            "modest-fashion",
+            "hijab-style"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_048",
+        "category": "Personalization",
+        "question": "Can I choose cultural preferences (Pakistani/Western)?",
+        "answer_content": "Yes, you can toggle between 'Traditional,' 'Western,' or 'Fusion' styles in your profile.",
+        "tags": [
+            "culture",
+            "style-type"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_049",
+        "category": "Personalization",
+        "question": "Can I add my wardrobe items?",
+        "answer_content": "Yes, you can upload photos of your own clothes to our 'Digital Closet' feature.",
+        "tags": [
+            "digital-closet",
+            "my-clothes"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_050",
+        "category": "Personalization",
+        "question": "Can it recommend outfits from my own wardrobe?",
+        "answer_content": "Yes, the bot can suggest combinations using items already in your 'Digital Closet' plus one new item to complete the look.",
+        "tags": [
+            "styling-closet",
+            "sustainable-fashion"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_051",
+        "category": "Virtual Try-On",
+        "question": "How accurate is the virtual try-on feature?",
+        "answer_content": "It uses state-of-the-art Generative AI to ensure 90%+ accuracy in fabric drape and color representation on your body.",
+        "tags": [
+            "vto",
+            "accuracy"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_052",
+        "category": "Virtual Try-On",
+        "question": "Can I try on multiple outfits at once?",
+        "answer_content": "You can try them one by one and save the images to your gallery to compare them later.",
+        "tags": [
+            "vto-usage",
+            "compare"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_053",
+        "category": "Virtual Try-On",
+        "question": "Can I see different color variations on myself?",
+        "answer_content": "Yes, if a dress is available in multiple colors, you can toggle between them in the try-on mode.",
+        "tags": [
+            "colors",
+            "vto-features"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_054",
+        "category": "Virtual Try-On",
+        "question": "Can I rotate the virtual model view?",
+        "answer_content": "Currently, the AI supports front-facing and slight side-angle views for the most realistic clothing drape.",
+        "tags": [
+            "view",
+            "angles"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_055",
+        "category": "Virtual Try-On",
+        "question": "Does it support both full body and upper body try-on?",
+        "answer_content": "Yes, the system detects your pose and can overlay either full suits or just shirts/tops.",
+        "tags": [
+            "full-body",
+            "upper-body"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_056",
+        "category": "Virtual Try-On",
+        "question": "Can I try on accessories virtually?",
+        "answer_content": "Jewelry try-on is in development, but you can see how bags and scarves look with the outfit overlay.",
+        "tags": [
+            "accessories-vto",
+            "roadmap"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_057",
+        "category": "Virtual Try-On",
+        "question": "Can I download my try-on images?",
+        "answer_content": "Yes, all try-on results can be saved to your phone's gallery with a single tap.",
+        "tags": [
+            "download",
+            "save"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_058",
+        "category": "Virtual Try-On",
+        "question": "Can I compare two outfits side by side?",
+        "answer_content": "Yes, we have a 'Comparison Mode' that puts two try-on photos side-by-side to help you decide.",
+        "tags": [
+            "compare",
+            "features"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_059",
+        "category": "Virtual Try-On",
+        "question": "Does it work on mobile devices?",
+        "answer_content": "Yes, GlamorBot is optimized for both iOS and Android browsers and apps.",
+        "tags": [
+            "mobile",
+            "compatibility"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_060",
+        "category": "Virtual Try-On",
+        "question": "Can I adjust lighting in try-on?",
+        "answer_content": "The AI automatically adjusts the garment lighting to match the lighting in your photo for a natural look.",
+        "tags": [
+            "lighting",
+            "auto-adjust"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_061",
+        "category": "Technical / Support",
+        "question": "What should I do if the chatbot doesn’t understand my question?",
+        "answer_content": "Try rephrasing or using keywords like 'Red Dress for Wedding'. If it still fails, use our menu buttons.",
+        "tags": [
+            "error",
+            "chatbot-help"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_062",
+        "category": "Technical / Support",
+        "question": "How can I report incorrect recommendations?",
+        "answer_content": "You can long-press a recommendation and select 'Report'. Our team reviews these to improve the AI.",
+        "tags": [
+            "feedback",
+            "report"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_063",
+        "category": "Technical / Support",
+        "question": "What if virtual try-on doesn’t load?",
+        "answer_content": "Check your internet connection and ensure your photo is under 5MB and in JPG/PNG format.",
+        "tags": [
+            "troubleshooting",
+            "vto-error"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_064",
+        "category": "Technical / Support",
+        "question": "Can I reset my preferences?",
+        "answer_content": "Yes, go to 'Profile Settings' and click 'Reset Style Profile' to start fresh.",
+        "tags": [
+            "reset",
+            "account"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_065",
+        "category": "Technical / Support",
+        "question": "How do I contact support?",
+        "answer_content": "You can email us at support@glamorbot.ai or use the 'Contact Us' form in the app.",
+        "tags": [
+            "contact",
+            "support"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_066",
+        "category": "Technical / Support",
+        "question": "Is GlamorBot free to use?",
+        "answer_content": "The styling advice is free. Some advanced Virtual Try-On features may require a premium subscription.",
+        "tags": [
+            "pricing",
+            "free-tier"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_067",
+        "category": "Technical / Support",
+        "question": "Will new features be added in future?",
+        "answer_content": "Yes, we are currently working on a '3D Avatar' mode and a men's fashion category.",
+        "tags": [
+            "roadmap",
+            "updates"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_068",
+        "category": "Technical / Support",
+        "question": "Can I use GlamorBot offline?",
+        "answer_content": "No, GlamorBot requires an active internet connection to process AI styling and try-on features.",
+        "tags": [
+            "offline",
+            "internet"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_069",
+        "category": "Technical / Support",
+        "question": "Does it support multiple languages?",
+        "answer_content": "Currently, we support English and Roman Urdu. Full Urdu script support is coming soon.",
+        "tags": [
+            "languages",
+            "urdu",
+            "english"
+        ],
+        "formality_level": 1
+    },
+    {
+        "id": "FAQ_070",
+        "category": "Technical / Support",
+        "question": "How often is the fashion database updated?",
+        "answer_content": "We update our style logic and outfit catalog weekly to include new arrivals and trending designs.",
+        "tags": [
+            "updates",
+            "database"
+        ],
+        "formality_level": 1
+    }
+]
