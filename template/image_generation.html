@@ -193,8 +193,20 @@ body{background:var(--bg);color:var(--text);font-family:"Jost",sans-serif;transi
 </div>
 
 <script>
-const GROQ_KEY      = "";
-const STABILITY_KEY = "";
+let GROQ_KEY      = "";
+let STABILITY_KEY = "";
+
+async function loadApiKeys() {
+  try {
+    const res = await fetch("/config/image-keys");
+    if (!res.ok) return;
+    const data = await res.json();
+    GROQ_KEY = data.groq_api_key || "";
+    STABILITY_KEY = data.stability_api_key || "";
+  } catch (e) {
+    // Keep empty keys; UI already shows a user-friendly message when missing.
+  }
+}
 
 let selectedDress = "";
 
@@ -238,9 +250,16 @@ function showArea(html) {
 }
 
 async function generate() {
+  if (!GROQ_KEY || !STABILITY_KEY) {
+    await loadApiKeys();
+  }
+
   if (!selectedDress) { alert("Please select a dress type!"); return; }
   if (GROQ_KEY==="YOUR_GROQ_KEY_HERE" || STABILITY_KEY==="YOUR_STABILITY_KEY_HERE") {
     showArea(`<div class="err">API keys not set! Add GROQ_KEY and STABILITY_KEY in index.html</div>`); return;
+  }
+  if (!GROQ_KEY || !STABILITY_KEY) {
+    showArea(`<div class="err">API keys not set! Add GROQ_API_KEY and STABILITY_API_KEY in .env file and restart server.</div>`); return;
   }
 
   const extra = document.getElementById("extra").value.trim();

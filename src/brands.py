@@ -7,6 +7,9 @@ import requests
 import re
 from datetime import datetime
 from typing import Optional
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Groq — optional, only used if GROQ_API_KEY is set
 try:

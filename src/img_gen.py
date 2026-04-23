@@ -9,6 +9,9 @@ import sys
 import pathlib
 import requests
 from datetime import datetime
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Fix Windows encoding
 if sys.platform == "win32":
@@ -27,8 +30,8 @@ except ImportError:
 # ================================================================
 #  API KEYS
 # ================================================================
-STABILITY_API_KEY = ""
-GROQ_API_KEY      = ""
+STABILITY_API_KEY = os.environ.get("STABILITY_API_KEY", os.environ.get("Stabiliy_API_KEY", ""))
+GROQ_API_KEY      = os.environ.get("GROQ_API_KEY", "")
 
 # ================================================================
 #  PAKISTANI EVENT RULES

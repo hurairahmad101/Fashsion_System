@@ -8,6 +8,8 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 from dotenv import load_dotenv
 
+load_dotenv()
+
 # Src folder ko path mein add karo
 sys.path.append(os.path.join(os.path.dirname(__file__), "src"))
 
@@ -15,8 +17,6 @@ from loader import GlamourBotLoader
 from vectorstore import build_vectorstore, load_vectorstore
 from rag_chain import build_rag_chain, chat
 from voice import speech_to_text, text_to_speech
-
-load_dotenv()
 
 app = FastAPI(title="GlamourBot Fashion Assistant")
 
@@ -72,6 +72,13 @@ def root():
 @app.get("/ui")
 def ui():
     return FileResponse(os.path.join(BASE_DIR, "index.html"))
+
+@app.get("/config/image-keys")
+def image_keys_config():
+    return {
+        "groq_api_key": os.getenv("GROQ_API_KEY", ""),
+        "stability_api_key": os.getenv("STABILITY_API_KEY", os.getenv("Stabiliy_API_KEY", "")),
+    }
 
 @app.post("/chat", response_model=ChatResponse)
 async def chat_endpoint(request: ChatRequest):
